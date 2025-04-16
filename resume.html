@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+    video#bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(17, 17, 17, 0.8);
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    main {
+      padding: 100px 20px 60px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+    section {
+      max-width: 800px;
+      margin: 0 auto 80px;
+      animation: fadeInUp 1s ease-in-out;
+      background-color: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 1px 1px 6px black;
+    }
+    section h3 {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: #00ffff;
+    }
+    section p, section li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    footer {
+      background-color: rgba(17, 17, 17, 0.8);
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      backdrop-filter: blur(3px);
+    }
+    .volume-control {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 1001;
+    }
+    .volume-control input[type=range] {
+      width: 100px;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bgVideo" autoplay muted loop>
+    <source src="ACID RAIN.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Volume Control -->
+  <div class="volume-control">
+    🔊 Volume<br>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0">
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="bio.html">Home</a></li>
+      <li><a href="resume.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Resume Section -->
+  <main>
+    <section id="resume">
+      <h2>Resume</h2>
+
+      <h3>Work</h3>
+      <p>Toronto Pearson Airport – Ramp Agent</p>
+      <h3>Education</h3>
+      <p>Humber College – Web Development Program (Expected Graduation: 202X)</p>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Video Editing & Filming</li>
+        <li>Responsive Web Design</li>
+      </ul>
+
+      <h3>Experience</h3>
+      <p><strong>Freelance Video Editor</strong> – 2020–Present</p>
+      <p>Edited and produced videos for YouTube and social media platforms.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Prince Ian Alexander Enriquez. All rights reserved.</p>
+  </footer>
+
+  <!-- Volume Script -->
+  <script>
+    const video = document.getElementById('bgVideo');
+    const volumeSlider = document.getElementById('volume');
+
+    volumeSlider.addEventListener('input', function () {
+      video.volume = this.value;
+      video.muted = false;
+    });
+  </script>
+</body>
+</html>

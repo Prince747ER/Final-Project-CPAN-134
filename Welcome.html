@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-image: url(Matrix.gif);
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .pill-buttons {
+      display: flex;
+      gap: 40px;
+    }
+    .pill-buttons a {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .red-pill {
+      background-color: red;
+    }
+    .red-pill:hover {
+      background-color: darkred;
+      transform: scale(1.1);
+    }
+    .blue-pill {
+      background-color: blue;
+    }
+    .blue-pill:hover {
+      background-color: darkblue;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome.</h1>
+  <p>This is your last chance. After this, there is no turning back.<br>
+     You take the blue pill—the story ends. You take the red pill—you stay in Wonderland.</p>
+  <div class="pill-buttons">
+    <a href="bio.html" class="red-pill">Take the Red Pill</a>
+    <a href="https://youtu.be/dQw4w9WgXcQ" class="blue-pill">Take the Blue Pill</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Main CSS File */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  header {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .gallery img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+  }
+  
+
+  body.license-home {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .license-card {
+    position: relative;
+    width: 700px;
+    max-width: 95%;
+  }
+  
+  .license-bg {
+    width: 100%;
+    display: block;
+    border: 4px solid #fff;
+    border-radius: 8px;
+  }
+  
+  .custom-text {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+  }
+  
+  .id-number { top: 60px; left: 320px; font-size: 18px; }
+  .name      { top: 360px; left: 40px; font-size: 20px; }
+  .dob       { top: 100px; left: 320px; font-size: 18px; }
+  .exp       { top: 100px; left: 500px; font-size: 18px; }
+  .quote     { bottom: 20px; right: 40px; font-size: 16px; font-style: italic; }
+  

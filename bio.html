@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prince Enriquez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+    video#bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(17, 17, 17, 0.8);
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffff;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+      backdrop-filter: blur(5px);
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px black;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-shadow: 1px 1px 4px black;
+    }
+    main {
+      padding: 60px 20px;
+      text-align: center;
+      backdrop-filter: blur(3px);
+    }
+    section {
+      margin-bottom: 80px;
+      padding: 20px;
+      border: 2px solid;
+      border-radius: 10px;
+      background-color: rgba(17, 17, 17, 0.8); /* semi-transparent background */
+      animation: fadeInUp 1s ease-in-out;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: rgba(17, 17, 17, 0.8);
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      backdrop-filter: blur(3px);
+    }
+    .volume-control {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 1001;
+    }
+    .volume-control input[type=range] {
+      width: 100px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bgVideo" autoplay muted loop>
+    <source src="ACID RAIN.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Volume Control -->
+  <div class="volume-control">
+    🔊 Volume<br>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0">
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="bio.html">Home</a></li>
+      <li><a href="resume.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Header -->
+  <header id="home">
+    <h1>CPAN 134 PROJECT</h1>
+    <p>BY PRINCE ENRIQUEZ</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m Prince, a passionate creative and web developer. I stay locked in on my vision to inspire and innovate through technology and storytelling.</p>
+    </section>
+
+    <section id="music">
+      <h2>Favorite Inspirations</h2>
+      <p>Motivated by rhythm, driven by passion — music and tech are how I express myself.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>A showcase of my latest works and creative endeavors.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>Want to collaborate or just say hi? Reach out anytime.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Prince Ian Alexander Enriquez. All rights reserved.</p>
+  </footer>
+
+  <!-- Volume Script -->
+  <script>
+    const video = document.getElementById('bgVideo');
+    const volumeSlider = document.getElementById('volume');
+
+    volumeSlider.addEventListener('input', function () {
+      video.volume = this.value;
+      video.muted = false;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prince Enriquez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    main {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .project {
+      position: relative;
+      width: 820px;
+      max-width: 90%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      transition: filter 0.3s ease;
+      display: block;
+    }
+
+    .project-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .project:hover img {
+      filter: blur(4px) brightness(70%);
+    }
+
+    .project:hover .project-title {
+      opacity: 1;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="bio.html">Home</a></li>
+      <li><a href="resume.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>My Projects</h1>
+    <p>Click on any project image to view more details.</p>
+    <div class="gallery">
+      <div class="project">
+        <a href="JS/JSFortune.html" target="_blank">
+          <img src="images/ProjectJS.jpg" alt="Project 1" />
+          <div class="project-title">JS API Project</div>
+        </a>
+      </div>
+      <div class="project">
+        <a href="WD/HomePage.html" target="_blank">
+          <img src="images/ProjectWD.jpg" alt="Project 2" />
+          <div class="project-title">WD Project 1</div>
+        </a>
+      </div>
+      <div class="project">
+        <a href="Cancelled Proj/TOW.html" target="_blank">
+          <img src="images/ProjectOG.jpg" alt="Project 3" />
+          <div class="project-title">Cancelled JS Project</div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Prince Ian Alexander Enriquez. All rights reserved.</p>
+  </footer>
+</body>
+</html>
