@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔮 Bored 8-Ball</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎲 Feeling Bored Today? 🔮</h1>
+  <button onclick="getActivity()">Get Random Activity</button>
+
+  <!-- Activity Popup -->
+  <div class="overlay" id="overlay"></div>
+  <div class="activity-popup" id="activityPopup">
+    <div id="activity"></div>
+    <button onclick="closePopup()" style="margin-top: 20px;">Close</button>
+  </div>
+
+  <!-- Magic 8-Ball -->
+  <div id="magic8ball" class="magic-8-ball">
+    <div class="ball">
+      <div class="window"></div>
+      <div class="answer" id="song-result">Shake me for a song!</div>
+    </div>
+  </div>
+  
+  <button onclick="shake8Ball()">🎵 Ask the Music 8-Ball</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
